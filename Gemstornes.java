@@ -7,24 +7,20 @@ public class Gemstornes {
 
     static int gemstones(String[] arr) {
 
-        Set intersection = new HashSet();
+    Set intersection = new HashSet();
 
-        for (int i = 0; i < arr.length; i++) {
-            Set tempSet = new HashSet();
-            for (int j = 0; j < arr[i].length(); j++) {
-                tempSet.add(new Character(arr[i].charAt(j)));
-            }
-            if (i == 0) {
-                intersection.addAll(tempSet);
-            } else {
-                intersection.retainAll(tempSet);
-            }
+    for (int i = 0; i < arr.length; i++) {
+        Set tempHashSet = new HashSet();
+        for (int j = 0; j < arr[i].length(); j++) {
+            tempHashSet.add(arr[i].charAt(j));
         }
-
-        return intersection.size();
-
+        if (i == 0) {
+            intersection.addAll(tempHashSet);
+        } else {
+            intersection.retainAll(tempHashSet);
+        }
     }
 
-
-
+    return intersection.size();
+    }
 }
