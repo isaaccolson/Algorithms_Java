@@ -25,7 +25,7 @@ public class VaildParentheses {
                     return false;
                 }
             } else {
-                stack.push(); //else the char is an open parenthesis push to top of stack
+                stack.push(c); //else the char is an open parenthesis push to top of stack
             }
         }
         return stack.empty(); //if the stack is empty then every open found its close mate and is true
