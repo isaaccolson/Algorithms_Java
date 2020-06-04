@@ -6,4 +6,12 @@ class Solution {
             s[s.length-(1+i)] = charHolder;
         }
     }
+    public String reverseString(String s) {
+        char[] charArray = new char[s.length()];
+        for (int i = 0; i < s.length()/2;i++) {
+            charArray[i] = s.charAt(s.length()-(1+i));
+            charArray[s.length()-(1+i)] = charArray[i];
+        }
+        return Arrays.toString(charArray);
+    }
 }
